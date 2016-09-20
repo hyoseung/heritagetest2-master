@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@+id/button3"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@+id/button3"
+                android:layout_x="210dp"
+                android:layout_y="31dp"
+                android:background="@drawable/wallofhoam"
+                android:onClick="button2Click"
+                android:text="호암산성"
+                android:textColor="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/button1"
+                android:background="@drawable/kyungsungtextile"
+                android:onClick="button3Click"
+                android:text="구 경성방직 사무동"
+                android:textColor="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_x="33dp"
+                android:layout_y="31dp"
+                android:background="@drawable/belgianconsulate"
+                android:onClick="button1Click"
+                android:text="구 벨기에 영사관"
+                android:textColor="@android:color/transparent" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

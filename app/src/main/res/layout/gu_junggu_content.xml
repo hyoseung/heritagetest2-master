@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_x="33dp"
+            android:layout_y="31dp"
+            android:background="@drawable/deoksugung"
+            android:onClick="button1Click"
+            android:text="덕수궁"
+            android:textColor="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_x="210dp"
+            android:layout_y="290dp"
+            android:background="@drawable/jeongdongchurch"
+            android:onClick="button6Click"
+            android:text="정동교회"
+            android:textColor="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/button1" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_x="33dp"
+            android:layout_y="290dp"
+            android:background="@drawable/myeongdongcathedral"
+            android:onClick="button5Click"
+            android:text="명동성당"
+            android:textColor="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/button1" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_x="33dp"
+            android:layout_y="420dp"
+            android:background="@drawable/anglican"
+            android:onClick="button7Click"
+            android:text="성공회 서울성당"
+            android:textColor="@android:color/transparent"
+            android:layout_below="@+id/button1"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>

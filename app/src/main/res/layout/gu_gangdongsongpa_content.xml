@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/amsadong"
+                android:onClick="button1Click"
+                android:text="암사동 유적"
+                android:textColor="@android:color/transparent"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/pungnapdong"
+                android:onClick="button2Click"
+                android:text="풍납동 토성"
+                android:textColor="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/button1" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

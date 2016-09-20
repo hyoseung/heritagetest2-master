@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.owl.heritage">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name=".Intro"
+            android:label="heritage"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="서울시 문화재"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="Heritage_information" android:label="@string/app_name"/>
+        <activity android:name="Course_survey" android:label="설문지"/>
+        <activity android:name="gu_Jongro" android:label="종로구"/>
+        <activity android:name="gu_Junggu" android:label="중구"/>
+        <activity android:name="gu_EunpyeonSeodaemun" android:label="은평/ 서대문구"/>
+        <activity android:name="gu_GangdongSongpa" android:label="강동/ 송파구"/>
+        <activity android:name="gu_GangbukSeongbuk" android:label="강북/ 성북구"/>
+        <activity android:name="gu_DobongNowon" android:label="도봉/ 노원"/>
+        <activity android:name="gu_GangYangGu" android:label="강서/ 양천/ 구로구"/>
+        <activity android:name="gu_MapoYongsan" android:label="마포/ 용산구"/>
+        <activity android:name="gu_JungDongSeoungGwang" android:label="중랑/동대문/성동/광진구"/>
+        <activity android:name="gu_SeochoGangnam" android:label="서초/ 강남구"/>
+        <activity
+            android:name="gu_YongDongGwanKum"
+            android:label="영등포/동작/관악/금천구" />
+        <activity android:name=".daum_map"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

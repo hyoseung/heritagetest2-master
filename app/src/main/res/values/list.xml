@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "dataArray">
+        <item>경복궁</item>
+        <item>덕수궁</item>
+        <item>창경궁</item>
+        <item>창덕궁</item>
+        <item>박노수 가옥</item>
+        <item>배재학당동관</item>
+        <item>구 벨기에영사관</item>
+        <item>이화여자고등학교 심슨 기념관</item>
+        <item>도산공원</item>
+        <item>백범 김구 기념관</item>
+        <item>서대문 형무소</item>
+        <item>탑골공원</item>
+        <item>안중근의사 기념관</item>
+        <item>명동성당</item>
+        <item>정동교회</item>
+        <item>성공회 서울성당</item>
+        <item>봉은사</item>
+        <item>청계천</item>
+        <item>한양도성</item>
+        <item>호암산성</item>
+        <item>아차산성</item>
+        <item>망원정 터</item>
+        <item>석파정</item>
+        <item>황학정</item>
+        <item>도봉서원과 각석군</item>
+        <item>문묘와 성균관</item>
+        <item>연세대학교 언더우드관</item>
+        <item>중앙고등학교 본관</item>
+        <item>암사동 유적</item>
+        <item>풍납동 토성</item>
+        <item>수유동 분청사기 가마터</item>
+        <item>구 경성방직 사무동</item>
+    </string-array>
+
+</resources>
