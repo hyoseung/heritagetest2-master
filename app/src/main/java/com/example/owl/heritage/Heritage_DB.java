@@ -35,10 +35,6 @@ public class Heritage_DB extends SQLiteOpenHelper {
     private String DB_Image;    //4
     private String DB_Choice;   //5
 
-    private ListViewCursorAdapter listViewCursorAdapter;
-    private ListView choice_Lv;
-    private View view;
-
     public Heritage_DB(Context mContext) {
         super(mContext, "Test.db", null, 1);
 
@@ -117,39 +113,18 @@ public class Heritage_DB extends SQLiteOpenHelper {
 
 
     //Tab3.java
-    public void Choice_query(final ListView choice_Lv, View view, Tab_3 tab3) {
-        this.choice_Lv = choice_Lv;
-        this.view = view;
-
-        db = getWritableDatabase();
+    public void choiceList(Tab3_Adapter customAdapter) {
+        db = getReadableDatabase();
 
         cur = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE Choice='true'", null);
 
-        cur.moveToFirst();
-
         if (cur.getCount() == 0) return;
 
-        //내용이 있을경우
-        listViewCursorAdapter = new ListViewCursorAdapter(mContext, cur, tab3);
-        choice_Lv.setAdapter(listViewCursorAdapter);
+        while(cur.moveToNext())
+            customAdapter.add(cur.getString(1));
 
+        cur.close();
         db.close();
-
-        choice_Lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                cur.moveToPosition(position);
-                String name = cur.getString(1);
-
-                Intent myIntent = new Intent(mContext, Heritage_information.class);
-                myIntent.putExtra("name", name);
-                mContext.startActivity(myIntent);
-            }
-        });
-    }
-
-    public ListViewCursorAdapter getListViewCursorAdapter() {
-        return listViewCursorAdapter;
     }
 
     @Override

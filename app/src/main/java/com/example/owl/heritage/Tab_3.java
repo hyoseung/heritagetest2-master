@@ -16,8 +16,8 @@ public class Tab_3 extends Fragment {
     private View view;
     private ListView choice_Lv;
     private Heritage_DB heritage_db;
-    private Context mContext;// = getActivity().getApplicationContext();
-    private ListViewCursorAdapter listViewCursorAdapter;
+    private Context mContext;
+    private Tab3_Adapter customAdapter;
 
     public Tab_3(Context mContext) {
         // Required empty public constructor
@@ -31,10 +31,11 @@ public class Tab_3 extends Fragment {
         view = inflater.inflate(R.layout.tab_3, container, false);
         choice_Lv = (ListView) view.findViewById(R.id.listView);
 
-        heritage_db = new Heritage_DB(mContext);
-        heritage_db.Choice_query(choice_Lv, view, this);
+        customAdapter = new Tab3_Adapter(this); //어댑터 생성
+        heritage_db = new Heritage_DB(mContext); //어댑터에 추가하기 위해 heritage_db 생성
 
-        listViewCursorAdapter = heritage_db.getListViewCursorAdapter();
+        choice_Lv.setAdapter(customAdapter);
+        heritage_db.choiceList(customAdapter); //어댑터에 정보 add하기
 
         return view;
     }
