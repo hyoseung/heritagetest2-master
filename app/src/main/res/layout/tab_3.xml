@@ -20,11 +20,11 @@
 
         <ListView
             android:id="@+id/listView"
-            android:layout_width="wrap_content"
-            android:layout_height="455dp"
+            android:layout_width="327dp"
+            android:layout_height="385dp"
             android:layout_alignParentStart="true"
-            android:layout_x="1dp"
-            android:layout_y="78dp"></ListView>
+            android:layout_x="25dp"
+            android:layout_y="103dp"></ListView>
 
     </AbsoluteLayout>
 

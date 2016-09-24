@@ -1,154 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp"
     tools:context="com.example.owl.heritage.Tab_2">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="중구"
-        android:id="@+id/중구"
-        android:nestedScrollingEnabled="true"
-        android:onClick="ButtonClicked_Junggu"
-        android:layout_below="@+id/종로구"
-        android:layout_centerHorizontal="true"
-        android:layout_x="141dp"
-        android:layout_y="175dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="은평/서대문"
-        android:id="@+id/은평서대문구"
-        android:layout_alignTop="@+id/중구"
-        android:layout_toStartOf="@+id/중구"
-        android:onClick="ButtonClicked_EunpyeonSeodaemun"
-        android:layout_x="-11dp"
-        android:layout_y="275dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="강북/성북"
-        android:id="@+id/강북성북"
-        android:layout_alignBottom="@+id/종로구"
-        android:layout_toEndOf="@+id/button"
-        android:layout_marginBottom="48dp"
-        android:onClick="ButtonClicked_GangbukSeongbuk"
-        android:layout_x="184dp"
-        android:layout_y="98dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="도봉/노원"
-        android:id="@+id/도봉노원"
-        android:layout_above="@+id/button2"
-        android:layout_toEndOf="@+id/button2"
-        android:onClick="ButtonClicked_DobongNowon"
-        android:layout_x="266dp"
-        android:layout_y="94dp" />
-
-    <Button
-        android:layout_width="126dp"
-        android:layout_height="105dp"
-        android:text="중/동/성/광"
-        android:id="@+id/중동성광"
-        android:layout_above="@+id/중구"
-        android:layout_toEndOf="@+id/중구"
-        android:onClick="ButtonClicked_JungDongSeoungGwang"
-        android:nestedScrollingEnabled="true"
-        android:layout_x="223dp"
-        android:layout_y="152dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="마포/용산"
-        android:id="@+id/마포용산"
-        android:layout_below="@+id/중구"
-        android:layout_alignEnd="@+id/종로구"
-        android:onClick="ButtonClicked_MapoYongsan"
-        android:layout_x="86dp"
-        android:layout_y="237dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="강서/양천/구로"
-        android:id="@+id/강서양천구로"
-        android:layout_marginTop="57dp"
-        android:layout_below="@+id/button5"
-        android:layout_toStartOf="@+id/중구"
-        android:onClick="ButtonClicked_GangYangGu"
-        android:layout_x="38dp"
-        android:layout_y="329dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="영/동/관/금"
-        android:id="@+id/영동관금"
-        android:layout_below="@+id/button6"
-        android:layout_alignStart="@+id/button5"
-        android:onClick="ButtonClicked_YongDongGwanKum"
-        android:layout_x="115dp"
-        android:layout_y="381dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="서초/강남"
-        android:id="@+id/서초강남"
-        android:layout_above="@+id/button7"
-        android:layout_toEndOf="@+id/button6"
-        android:onClick="ButtonClicked_SeochoGangnam"
-        android:layout_x="208dp"
-        android:layout_y="345dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="강동/송파"
-        android:id="@+id/강동송파"
-        android:onClick="ButtonClicked_GangdongSongpa"
-        android:layout_below="@+id/button8"
-        android:layout_alignBottom="@+id/button7"
-        android:layout_alignEnd="@+id/button3"
-        android:layout_x="270dp"
-        android:layout_y="293dp" />
     <AutoCompleteTextView
+        android:id="@+id/search_heritage"
         android:layout_width="217dp"
         android:layout_height="54dp"
-        android:layout_x="39dp"
-        android:layout_y="20dp"
-        android:hint="ex)경복궁, 창덕궁"
-        android:id="@+id/search_heritage"/>
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/query"
+        android:hint="ex)경복궁, 창덕궁" />
+
 
     <Button
+        android:id="@+id/query"
         android:layout_width="73dp"
         android:layout_height="wrap_content"
-        android:text="검색"
-        android:id="@+id/query"
-        android:layout_x="257dp"
-        android:layout_y="25dp" />
-
-    <Button
-        android:layout_width="175dp"
-        android:layout_height="187dp"
-        android:id="@+id/종로구"
-        android:layout_marginTop="121dp"
-        android:onClick="ButtonClicked_Jongro"
-        android:layout_marginStart="89dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_x="-6dp"
-        android:layout_y="58dp"
-        android:background="@drawable/nari"
-        android:scaleType="fitCenter"
-        android:layout_row="9"
-        android:layout_column="5" />
+        android:layout_gravity="right"
+        android:layout_marginEnd="30dp"
+        android:text="검색" />
 
-</AbsoluteLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/종로구"
+                android:layout_width="376dp"
+                android:layout_height="103dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/jongro"
+                android:onClick="ButtonClicked_Jongro"
+                android:scaleType="fitCenter" />
+
+
+            <Button
+                android:id="@+id/중구"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/junggu"
+                android:onClick="ButtonClicked_Junggu" />
+
+            <Button
+                android:id="@+id/은평서대문구"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:onClick="ButtonClicked_EunpyeonSeodaemun"
+                android:background="@drawable/eunpyeonseodaemun"/>
+
+            <Button
+                android:id="@+id/서초강남"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/gangnamseocho"
+                android:onClick="ButtonClicked_SeochoGangnam" />
+
+            <Button
+                android:id="@+id/영동관금"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/yongdonggwankum"
+                android:onClick="ButtonClicked_YongDongGwanKum" />
+
+            <Button
+                android:id="@+id/강동송파"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/gangdongsongpa"
+                android:onClick="ButtonClicked_GangdongSongpa" />
+
+            <Button
+                android:id="@+id/중동성광"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/jungdongseounggwang"
+                android:nestedScrollingEnabled="true"
+                android:onClick="ButtonClicked_JungDongSeoungGwang" />
+
+            <Button
+                android:id="@+id/마포용산"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/mapoyobgsan"
+                android:onClick="ButtonClicked_MapoYongsan" />
+
+            <Button
+                android:id="@+id/도봉노원"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/nowondobong"
+                android:onClick="ButtonClicked_DobongNowon" />
+
+            <Button
+                android:id="@+id/강북성북"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/gangbukseongbuk"
+                android:onClick="ButtonClicked_GangbukSeongbuk" />
+
+            <Button
+                android:id="@+id/강서양천구로"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/gangyanggu"
+                android:onClick="ButtonClicked_GangYangGu" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

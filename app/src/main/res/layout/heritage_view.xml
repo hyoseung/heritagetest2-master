@@ -16,13 +16,17 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="96dp"
-        android:layout_height="wrap_content"
+        android:layout_width="227dp"
+        android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/dbsummary"
-        android:layout_x="5dp"
-        android:layout_y="253dp"
-        android:text="좋아요" />
+        android:layout_x="4dp"
+        android:layout_y="256dp"
+        android:checked="true"
+        android:button="@null"
+        android:text="좋아요"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/checkbox"/>
 
     <TextView
         android:id="@+id/dbname"
