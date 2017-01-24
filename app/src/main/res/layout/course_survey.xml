@@ -6,50 +6,74 @@
     android:orientation="horizontal"
     android:weightSum="1">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="설문지"
-        android:id="@+id/textView3"
+        android:text="연령"
+        android:id="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:textSize="40dp"
+        android:textIsSelectable="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1. 설문지 시작 질문"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView3"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="38dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="독립"
-        android:id="@+id/checkBox2"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:checked="false" />
+        android:text="연령대를 선택해주세요"
+        android:id="@+id/textView4"
+        android:textSize="25dp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="취소"
-        android:id="@+id/cancel_button"
-        android:layout_marginBottom="59dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView3" />
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_ten"
+        android:id="@+id/button10"
+        android:onClick="Button_10"
+        android:layout_alignTop="@+id/button20"
+        android:layout_toStartOf="@+id/textView" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="확인"
-        android:id="@+id/select_button"
-        android:layout_alignTop="@+id/cancel_button"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_twenty"
+        android:id="@+id/button20"
+        android:onClick="Button_20"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_thirty"
+        android:id="@+id/button30"
+        android:layout_below="@+id/button10"
+        android:layout_alignEnd="@+id/button10"
+        android:onClick="Button_30"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_forty"
+        android:id="@+id/button40"
+        android:layout_below="@+id/button20"
+        android:layout_alignStart="@+id/button20"
+        android:onClick="Button_40"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_xsign"
+        android:id="@+id/button_dontcare"
+        android:onClick="Button_dontcare"
+        android:layout_below="@+id/button30"
+        android:layout_alignStart="@+id/button30" />
 </RelativeLayout>

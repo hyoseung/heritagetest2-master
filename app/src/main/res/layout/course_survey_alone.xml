@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="혼자"
+        android:id="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:textSize="40dp"
+        android:textIsSelectable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아쉽네요.."
+        android:id="@+id/textView4"
+        android:textSize="23dp"
+        android:textIsSelectable="false"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천코스는 하나뿐입니다ㅠㅠ.."
+        android:id="@+id/textView5"
+        android:textSize="23dp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다음엔 친구와 함께 하세요!^-^"
+        android:id="@+id/textView6"
+        android:textSize="23dp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
+
+    <LinearLayout
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:id="@+id/cancel_button_a"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/textView"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/cancel"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:id="@+id/select_button_a"
+            android:layout_alignTop="@+id/select_button_a"
+            android:layout_toEndOf="@+id/textView"
+            android:background="@drawable/make"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:background="@drawable/alone"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+
+</RelativeLayout>

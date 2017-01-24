@@ -1,32 +1,21 @@
 package com.example.owl.heritage;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
-
-import com.example.owl.heritage.Heritage_find;
-import com.example.owl.heritage.Heritage_information;
-import com.example.owl.heritage.R;
-import com.example.owl.heritage.gu_DobongNowon;
-import com.example.owl.heritage.gu_EunpyeonSeodaemun;
-import com.example.owl.heritage.gu_GangYangGu;
-import com.example.owl.heritage.gu_GangbukSeongbuk;
-import com.example.owl.heritage.gu_GangdongSongpa;
-import com.example.owl.heritage.gu_Jongro;
-import com.example.owl.heritage.gu_JungDongSeoungGwang;
-import com.example.owl.heritage.gu_Junggu;
-import com.example.owl.heritage.gu_MapoYongsan;
-import com.example.owl.heritage.gu_SeochoGangnam;
-import com.example.owl.heritage.gu_YongDongGwanKum;
 
 import java.util.ArrayList;
 
@@ -44,6 +33,7 @@ public class Tab_2 extends Fragment implements View.OnClickListener{
     private ArrayList<String> list;
     private ArrayAdapter<String> adapter;
     String[] heritage_list;
+    private Map_image map_image;
 
     Button gu_JongroB,gu_DobongNowonB, gu_EunpyeonSeodaemunB, gu_GangbukSeongbukB, gu_GangdongSongpaB,
            gu_GangYangGuB, gu_JungDongSeongGwangB, gu_JungguB, gu_MapoYongsanB, gu_SeochoGangnamB, gu_YongDongGwanKumB;
@@ -57,7 +47,14 @@ public class Tab_2 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         v =  inflater.inflate(R.layout.tab_2, container, false);
         finder = new Heritage_find(mContext);
-
+        Button map_view = (Button) v.findViewById(R.id.seoulmap);
+        map_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                map_image = new Map_image(mContext);
+                map_image.show();
+            }
+        });
         query_btn = (Button) v.findViewById(R.id.query);
         query_btn.setOnClickListener(this);
 
@@ -155,6 +152,16 @@ public class Tab_2 extends Fragment implements View.OnClickListener{
         autoText= (AutoCompleteTextView)v.findViewById(R.id.search_heritage);
         autoText.setAdapter(adapter); //adapter로 넘겨줌
 
+        //카메라 지도 관련 권한
+        if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(mContext, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA,
+                    Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1340);
+            return v;
+        }
+
         return  v;
     }
 
@@ -173,7 +180,9 @@ public class Tab_2 extends Fragment implements View.OnClickListener{
 
         }
         else if(s==false){
-            Toast.makeText(getActivity(),"결과가 없습니다.",Toast.LENGTH_LONG).show();
+            final Toast toast=Toast.makeText(getActivity(),"결과가 없습니다.",Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP,0,400);
+            toast.show();
         }
 
     }

@@ -1,17 +1,11 @@
 package com.example.owl.heritage;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v4.widget.CursorAdapter;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,22 +20,20 @@ public class Heritage_DB extends SQLiteOpenHelper {
     private String TABLE_NAME = "information";
     private SQLiteDatabase db;
     private Cursor cur;
-
     private String heritage_name;
-
     private String DB_Name;      //1
     private String DB_Location; //2
     private String DB_Summary;  //3
     private String DB_Image;    //4
     private String DB_Choice;   //5
+    private String DB_History;//6
+    private String DB_Uri;  //7
 
     public Heritage_DB(Context mContext) {
         super(mContext, "Test.db", null, 1);
-
         this.mContext = mContext;
 
         initialize(mContext);
-
         db = mContext.openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
     }
 
@@ -75,18 +67,13 @@ public class Heritage_DB extends SQLiteOpenHelper {
 
         cur.moveToFirst();
 
-        Log.i("move!!!", "" + cur.getString(0));
-        Log.i("move!!!", "" + cur.getString(1));
-        Log.i("move!!!", "" + cur.getString(2));
-        Log.i("move!!!", "" + cur.getString(3));
-        Log.i("move!!!", "" + cur.getString(4));
-        Log.i("move!!!", "" + cur.getString(5));
-
         DB_Name = cur.getString(1);
         DB_Location = cur.getString(2);
         DB_Summary = cur.getString(3);
         DB_Image = cur.getString(4);
         DB_Choice = cur.getString(5);
+        DB_History = cur.getString(6);
+        DB_Uri = cur.getString(7);
 
         cur.close();
     }
@@ -109,6 +96,14 @@ public class Heritage_DB extends SQLiteOpenHelper {
 
     public String getDB_Choice() {
         return DB_Choice;
+    }
+
+    public String getDB_History() {
+        return DB_History;
+    }
+
+    public String getDB_Uri() {
+        return DB_Uri;
     }
 
 

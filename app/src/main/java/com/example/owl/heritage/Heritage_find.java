@@ -15,12 +15,9 @@ import android.util.Log;
  */
 public class Heritage_find extends AppCompatActivity {
     private Context mContext = this;
-
     private String DB_NAME = "Test.db";
     private String TABLE_NAME = "information";
-
     private SQLiteDatabase db;
-
     private Heritage_DB heritage_db;
     private Cursor cur;
 
@@ -34,9 +31,6 @@ public class Heritage_find extends AppCompatActivity {
     }
 
     public boolean select_name(String search_name) { //검색어 찾아주는 메소드
-
-        Log.i("찾음", "" + search_name);
-
         cur = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE Name='" + search_name + "'", null);
 
         if (cur.getCount() > 0)

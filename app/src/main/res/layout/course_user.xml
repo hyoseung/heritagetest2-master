@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="내맘대로"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="문화재를 4개 선택해 주세요!!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="308dp"
+        android:columnCount="3"
+        android:rowCount="9"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_gravity="center_horizontal">
+
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경복궁"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="창덕궁"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="창경궁"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탑골공원"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="봉은사"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중앙고 본관"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="한양도성"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="덕수궁"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="명동성당"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성공회 서울성당"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정동교회"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서대문 형무소"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연대 언더우드관"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="도산공원"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문묘와 성균관"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="벨기에 영사관"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경성방직"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="호암산성"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="암사동 유적"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="풍납동 토성"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종묘"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아차산성"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="망원정 터"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="백범김구"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="도봉서원"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+
+        <CheckBox
+            android:id="@+id/checkBox26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가마터"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cancel"
+            android:id="@+id/cancel_button_u"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/select_button_u"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/make"
+            android:id="@+id/select_button_u"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

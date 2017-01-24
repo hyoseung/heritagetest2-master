@@ -23,7 +23,6 @@ public class gu_Junggu extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
         Button btn = (Button)findViewById(R.id.button1);
         myIntent.putExtra("name", btn.getText());
-        //myIntent.putExtra("name", "덕수궁"); //만약 버튼에 text없이 이미지만 넣을 경우
         startActivity(myIntent);
     }
 
@@ -32,7 +31,6 @@ public class gu_Junggu extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
         Button btn = (Button)findViewById(R.id.button2);
         myIntent.putExtra("name", btn.getText());
-        //myIntent.putExtra("name", "경복궁"); //만약 버튼에 text없이 이미지만 넣을 경우
         startActivity(myIntent);
     }
 
@@ -41,7 +39,6 @@ public class gu_Junggu extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
         Button btn = (Button)findViewById(R.id.button3);
         myIntent.putExtra("name", btn.getText());
-        //myIntent.putExtra("name", "경복궁"); //만약 버튼에 text없이 이미지만 넣을 경우
         startActivity(myIntent);
     }
 
@@ -50,7 +47,6 @@ public class gu_Junggu extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
         Button btn = (Button)findViewById(R.id.button4);
         myIntent.putExtra("name", btn.getText());
-        //myIntent.putExtra("name", "경복궁"); //만약 버튼에 text없이 이미지만 넣을 경우
         startActivity(myIntent);
     }
 }

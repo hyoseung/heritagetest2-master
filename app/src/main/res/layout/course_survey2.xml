@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="함께"
+        android:id="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:textSize="40dp"
+        android:textIsSelectable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="누구와 함께 하시겠습니까?"
+        android:id="@+id/textView4"
+        android:textSize="25dp"
+        android:textIsSelectable="false"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/alone"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView"
+        android:background="@drawable/btn_alone"
+        android:onClick="Button_alone"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/friend"
+        android:layout_alignTop="@+id/alone"
+        android:layout_toEndOf="@+id/textView"
+        android:onClick="Button_friend"
+        android:background="@drawable/btn_friend"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/family"
+        android:onClick="Button_family"
+        android:background="@drawable/btn_family"
+        android:layout_alignTop="@+id/couple"
+        android:layout_alignStart="@+id/alone" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/couple"
+        android:layout_below="@+id/friend"
+        android:layout_alignStart="@+id/friend"
+        android:onClick="Button_couple"
+        android:background="@drawable/btn_couple"
+        android:layout_marginTop="32dp"/>
+</RelativeLayout>

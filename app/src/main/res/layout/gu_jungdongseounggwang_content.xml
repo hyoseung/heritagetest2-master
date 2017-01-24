@@ -15,16 +15,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button1"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:background="@drawable/cheonggyecheon"
-                android:onClick="button1Click"
-                android:text="청계천"
-                android:textColor="@android:color/transparent"
-                android:layout_marginRight="10dp"/>
-
-            <Button
                 android:id="@+id/button2"
                 android:layout_width="170dp"
                 android:layout_height="170dp"

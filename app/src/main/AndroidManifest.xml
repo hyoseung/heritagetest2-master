@@ -8,19 +8,21 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="문콕"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
         <activity
             android:name=".Intro"
-            android:label="heritage"
+            android:label="문콕"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +36,12 @@
             android:windowSoftInputMode="stateHidden"/>
         <activity android:name="Heritage_information" android:label="@string/app_name"/>
         <activity android:name="Course_survey" android:label="설문지"/>
+        <activity android:name="Course_user" android:label="설문지"/>
+        <activity android:name="Course_survey2" android:label="설문지"/>
+        <activity android:name="Course_survey_alone" android:label="설문지"/>
+        <activity android:name="Course_survey_friend" android:label="설문지"/>
+        <activity android:name="Course_survey_family" android:label="설문지"/>
+        <activity android:name="Course_survey_couple" android:label="설문지"/>
         <activity android:name="gu_Jongro" android:label="종로구"/>
         <activity android:name="gu_Junggu" android:label="중구"/>
         <activity android:name="gu_EunpyeonSeodaemun" android:label="은평/ 서대문구"/>
@@ -53,6 +61,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Course_information"/>
+        <activity android:name=".onepin_map"/>
     </application>
 
 </manifest>

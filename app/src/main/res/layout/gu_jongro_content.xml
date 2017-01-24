@@ -91,6 +91,7 @@
             android:onClick="button5Click"
             android:text="탑골공원"
             android:textColor="@android:color/transparent" />
+
         <Button
             android:layout_width="170dp"
             android:layout_height="170dp"
@@ -103,8 +104,23 @@
             android:background="@drawable/wallofseoul"
             android:layout_marginStart="26dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"/>
 
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:text="종묘"
+            android:textColor="@android:color/transparent"
+            android:id="@+id/button8"
+            android:onClick="button4Click"
+            android:layout_x="182dp"
+            android:layout_y="541dp"
+            android:background="@drawable/jongmyo"
+            android:layout_marginStart="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"/>
 
     </AbsoluteLayout>
 

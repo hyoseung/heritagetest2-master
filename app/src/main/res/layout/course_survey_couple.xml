@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:layout_gravity="center_horizontal">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연인"
+        android:id="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:textSize="40dp"
+        android:textIsSelectable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="관심사를 골라주세요"
+        android:id="@+id/textView4"
+        android:textSize="25dp"
+        android:textIsSelectable="false"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <RadioGroup
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데이트"
+            android:button="@null"
+            android:drawableLeft="@drawable/radiobutton"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/exprience_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="체험"
+            android:button="@null"
+            android:drawableLeft="@drawable/radiobutton"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/religion_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종교"
+            android:button="@null"
+            android:drawableLeft="@drawable/radiobutton"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진"
+            android:button="@null"
+            android:drawableLeft="@drawable/radiobutton"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/school_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="학교"
+            android:button="@null"
+            android:drawableLeft="@drawable/radiobutton"
+            android:layout_margin="5dp"/>
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:id="@+id/cancel_button_c"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cancel" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:id="@+id/select_button_c"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView"
+        android:background="@drawable/make" />
+
+    </LinearLayout>
+
+</LinearLayout>

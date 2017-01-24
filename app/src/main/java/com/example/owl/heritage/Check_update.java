@@ -11,9 +11,7 @@ import android.util.Log;
 public class Check_update extends SQLiteOpenHelper {
 
     private Context mContext;
-    private String DB_NAME = "Test.db";
     private String TABLE_NAME = "information";
-
     private SQLiteDatabase db;
     private String heritage_name;
 
@@ -23,12 +21,9 @@ public class Check_update extends SQLiteOpenHelper {
         this.mContext = mContext;
         db = mContext.openOrCreateDatabase("Test.db", Context.MODE_PRIVATE, null);
         db = getWritableDatabase();
-        Log.i("option","check_update 클래스");
     }
 
     public void Check_true(){
-        Log.i("option", "update즐겨찾기내용에 추가");
-
         try {
             String sql = "UPDATE " + TABLE_NAME + " SET Choice='" + "true' WHERE Name='" + heritage_name + "';";
             db.execSQL(sql);
@@ -38,8 +33,6 @@ public class Check_update extends SQLiteOpenHelper {
     }
 
     public void Check_false(){
-        Log.i("option", "update즐겨찾기내용에 삭제");
-
         try {
             String sql = "UPDATE " + TABLE_NAME + " SET Choice='" + "false' WHERE Name='" + heritage_name + "';";
             db.execSQL(sql);

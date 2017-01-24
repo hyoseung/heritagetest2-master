@@ -1,13 +1,17 @@
 package com.example.owl.heritage;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,18 +22,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         TabLayout tabLayout =
                 (TabLayout) findViewById(R.id.tab_layout);
 
         tabLayout.addTab(tabLayout.newTab().setIcon(
-                android.R.drawable.ic_menu_search));
+                R.drawable.ic_check));
         tabLayout.addTab(tabLayout.newTab().setIcon(
-                android.R.drawable.ic_dialog_dialer));
+                R.drawable.ic_home));
         tabLayout.addTab(tabLayout.newTab().setIcon(
-                android.R.drawable.btn_star));
+                R.drawable.ic_heart));
 
         final ViewPager viewPager =
                 (ViewPager) findViewById(R.id.pager);
@@ -60,5 +62,7 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //어플 세로고정
 
     }
+
+
 
 }

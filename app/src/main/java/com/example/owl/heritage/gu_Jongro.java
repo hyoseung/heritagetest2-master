@@ -23,7 +23,6 @@ public class gu_Jongro extends AppCompatActivity {
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
         Button btn = (Button)findViewById(R.id.button1);
         myIntent.putExtra("name", btn.getText());
-        //myIntent.putExtra("name", "경복궁"); //만약 버튼에 text없이 이미지만 넣을 경우
         startActivity(myIntent);
     }
 
@@ -60,7 +59,6 @@ public class gu_Jongro extends AppCompatActivity {
     }
 
 
-
     // 서울 문묘와 성균관
     public void button9Click(View v){
         Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
@@ -77,7 +75,12 @@ public class gu_Jongro extends AppCompatActivity {
         startActivity(myIntent);
     }
 
-
-
+    //종묘
+    public void button4Click(View v){
+        Intent myIntent = new Intent(getApplicationContext(), Heritage_information.class);
+        Button btn = (Button)findViewById(R.id.button8);
+        myIntent.putExtra("name", btn.getText());
+        startActivity(myIntent);
+    }
 
 }
